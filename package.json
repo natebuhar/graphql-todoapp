@@ -1,0 +1,27 @@
+{
+  "name": "todolist.js",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^2.30.1",
+    "live-server": "^1.2.0",
+    "nodemon": "^1.12.1",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "dependencies": {
+    "graphql": "^0.11.6",
+    "react": "^16.0.0",
+    "react-apollo": "^1.4.16",
+    "react-dom": "^16.0.0"
+  },
+  "scripts": {
+    "webpack": "webpack --watch",
+    "frontend": "live-server --proxy=/graphql:http://127.0.0.1:5000/graphql/ ./build/frontend",
+    "backend": "nodemon -w ./build/backend ./build/backend/main.js"
+  }
+}
